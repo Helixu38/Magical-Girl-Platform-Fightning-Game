@@ -11,5 +11,19 @@ config_version=5
 [application]
 
 config/name="Magical Girl Platform Fighter"
+run/main_scene="res://Stages/Test stage.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Walls"
+2d_physics/layer_3="Platforms"
+2d_physics/layer_4="Ledge"
+2d_physics/layer_5="Blastzones"

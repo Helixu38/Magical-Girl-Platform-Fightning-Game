@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://4srjv41ljvru"]
+
+[ext_resource type="Texture2D" uid="uid://dlvvy0llwt72w" path="res://Stages/Magical Girl Smashing/1.png" id="1_50e3u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfma8"]
+size = Vector2(963, 39)
+
+[node name="Test Stage" type="Node2D"]
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(282, 823)
+scale = Vector2(2, 2)
+texture = ExtResource("1_50e3u")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(281, 1053)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_gfma8")
+
+[node name="Label" type="Label" parent="Floor"]
+offset_left = 29.0
+offset_top = -11.0
+offset_right = 69.0
+offset_bottom = 12.0
+text = "Floor"
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(282, 1117)
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+position = Vector2(24, -852)
+polygon = PackedVector2Array(318, 903, 401, 864, 459, 807, -507, 807, -448, 864, -363, 903)
+
+[node name="Label" type="Label" parent="Wall"]
+offset_left = 42.0
+offset_top = 3.0
+offset_right = 82.0
+offset_bottom = 26.0
+text = "Wall
+"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(272, 721)
+limit_left = -850
+limit_top = 106
+limit_right = 1414
+limit_bottom = 1376
+drag_left_margin = 0.0
+drag_right_margin = 0.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
